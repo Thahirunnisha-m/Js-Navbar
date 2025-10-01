@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark sidebar</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <!-- Sidebar section -->
+     <div class="sidebar" id="sidebar">
+        <ul
+        class="menu">
+       <li><i class="fa-solid fa-house"></i><span>Home</span></li>
+       <li><i class="fa-solid fa-user"></i><span>Profile</span></li>
+       <li><i class="fa-solid fa-envelope"></i><span>Message</span></li>
+       <li class="separator"></li>
+       <li><i class="fa-solid fa-gear"></i><span>Settings</span></li>
+       <li><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></li>
+       <li class="separator"></li>
+       <li><i class="fa-solid fa-address-book"></i> <span>Contact</span></li>
+       <li><i class="fa-solid fa-circle-info"></i><span>About</span></li>
+       <li><i class="fa-solid fa-triangle-exclamation"></i><span>Disclimer</span></li>
+      </ul>
+      </div>
+      <!-- Humburger menu button -->
+       <button class="humburger" id="toggleBtn">
+        <i class="fas fa-bars"></i>
+    </button>
+    <!-- main content -->
+     <div class="content">
+        <h1>Content</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam omnis quasi molestias id. Quis illo animi necessitatibus corporis accusantium, optio nisi dignissimos itaque harum rem hic. Dolore molestiae facere unde mollitia eius quos ducimus vel fugit, rerum fuga nobis, accusantium alias tenetur cumque molestias ipsam id tempora, aut est. Distinctio tempora expedita vitae, qui odio amet consequatur omnis, incidunt eaque corrupti quibusdam repellat? Tempore dolorem necessitatibus sit consequuntur aut. Ex, esse quas maxime, repellendus deserunt qui, magnam incidunt voluptates nemo nostrum mollitia beatae sit. Atque assumenda dolor quis voluptatibus reiciendis eius, corrupti odio suscipit reprehenderit est illo provident similique quia dolorem optio quod officia cum facere rem doloremque aperiam libero distinctio! Ea, ab? Asperiores doloribus iusto natus voluptates quam id reiciendis suscipit dolores deserunt temporibus praesentium optio architecto dolore, reprehenderit odit? Ut reiciendis illo porro praesentium, consequatur distinctio impedit? Fugit culpa dolore dolores, minus libero, odio cum expedita quia omnis sed odit animi, placeat ex doloribus corrupti ducimus. Ducimus hic repellat odit quis laborum culpa voluptate sapiente dolor impedit natus dolorum, voluptatum nihil corrupti minus accusamus optio placeat exercitationem. Eius distinctio aliquid officiis assumenda repellat eveniet corporis, excepturi laboriosam? Quae unde itaque autem ipsa est quam, qui nostrum assumenda!</p>
+    </div>
+    <!-- Javascript code -->
+     <script>
+       const sidebar = document.getElementById("sidebar");
+       const toggleBtn = document.getElementById("toggleBtn");
+       let state = "expanded" 
+       toggleBtn.addEventListener("click",()=>{
+        if (state === "expanded"){
+            sidebar.classList.add("collapsed");
+            state = "collapsed"
+        }
+        else if(state === "collapsed"){
+        sidebar .classList.remove("collapsed")
+       sidebar .classList.add("hidden");
+       state = "hidden";
+        }
+        else{
+            sidebar.classList.remove("hidden");
+            state = "expanded"
+        }
+       });
+     </script>
+</body>
+</html>
